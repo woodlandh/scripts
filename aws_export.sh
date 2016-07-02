@@ -40,6 +40,17 @@ export AWS_REGION=${region}
 export AWS_DEFAULT_REGION=${region}
 
 # Hashicorp Terraform
+# this allows you to set your aws.tf provider like so:
+#
+# variable "aws_access_key" {} #env variable
+# variable "aws_secret_key" {} # env variable
+# variable "aws_region" {} #env variable
+# provider "aws" {
+#     access_key = "${var.aws_access_key}"
+#     secret_key = "${var.aws_secret_key}"
+#     region = "${var.aws_region}"
+# }
+
 export TF_VAR_aws_access_key=${AWS_ACCESS_KEY_ID}
 export TF_VAR_aws_secret_key=${AWS_SECRET_ACCESS_KEY}
 export TF_VAR_aws_region=${AWS_REGION}
