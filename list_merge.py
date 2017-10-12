@@ -69,13 +69,6 @@ def overlaps(tupl1, tupl2):
     """
     return (tupl1[0] <= tupl2[0] <= tupl1[1]) or (tupl1[0] <= tupl2[1] <= tupl1[0])
 
-    # This was my original answer, and while easy to read, it
-    # is highly inefficient. range() creates an entire list
-    # and set intersection is performed on each element in
-    # this list. Legible code != smart code
-    #r1 = range(tupl1[0],tupl1[1]+1)
-    #r2 = range(tupl2[0],tupl2[1]+1)
-    #return bool(set(r1) & set(r2))
 
 ####################
 # PYTEST
